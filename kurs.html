@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site name</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <div class="container" style="padding-top: 24px">
+      <img class="green-banner" src="./assets/images/Center.svg" alt="" />
+      <div class="kurs">
+        <h2>Курс USDT</h2>
+        <div class="kurs-btn">
+          <span><img src="./assets/images/buy_icon.svg" alt="" /> Покупка</span>
+          <h3 id="buy" class="buy-usdt"></h3>
+        </div>
+        <div class="kurs-btn">
+          <span
+            ><img src="./assets/images/sell_icon.svg" alt="" /> Продажа</span
+          >
+          <h3 id="sell" class="sell-usdt"></h3>
+        </div>
+      </div>
+      <div class="kurs">
+        <h2>Курс доллар</h2>
+        <div class="kurs-btn">
+          <span><img src="./assets/images/buy_icon.svg" alt="" /> Покупка</span>
+          <h3 id="buy" class="buy-dollar"></h3>
+        </div>
+        <div class="kurs-btn">
+          <span
+            ><img src="./assets/images/sell_icon.svg" alt="" /> Продажа</span
+          >
+          <h3 id="sell" class="sell-dollar"></h3>
+        </div>
+        <div class="kurs-info">
+          <div class="kurs-info__btn">
+            <img
+              src="./assets/images/activity-notification-circle.svg"
+              alt=""
+            />
+            <p>Данный курс является биржевым и меняется каждый час</p>
+          </div>
+          <div class="kurs-info__btn">
+            <img src="./assets/images/percent-circle.svg" alt="" />
+            <p>Мы не берем никаких дополнительных комиссий</p>
+          </div>
+        </div>
+      </div>
+      <div class="home-btn black" onclick="goBack()">
+        <img src="./assets/images/Group 4 (6).svg" alt="" />
+        <h3>Вернуться назад</h3>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/kurs.js"></script>
+  </body>
+</html>

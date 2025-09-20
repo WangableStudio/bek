@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <div class="container" style="padding-top: 24px">
+      <div class="exchange">
+        <h1>Админ панель</h1>
+      </div>
+      <img class="green-banner" src="./assets/images/Center (1).svg" alt="" />
+      <div class="applications"></div>
+      <div class="exchange">
+        <form action="" class="exchange-form" method="post">
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="buy_usdt"
+              name="buy_usdt"
+              id="buy_usdt"
+            />
+            <label for="buy_usdt" class="form__label">Курс USDT покупка</label>
+          </div>
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="sell_usdt"
+              name="sell_usdt"
+              id="sell_usdt"
+            />
+            <label for="sell_usdt" class="form__label">Курс USDT продажа</label>
+          </div>
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="buy_dollar"
+              name="buy_dollar"
+              id="buy_dollar"
+            />
+            <label for="buy_dollar" class="form__label"
+              >Курс доллар покупка</label
+            >
+          </div>
+          <div class="form__group field">
+            <input
+              type="input"
+              class="form__field"
+              placeholder="sell_dollar"
+              name="sell_dollar"
+              id="sell_dollar"
+            />
+            <label for="sell_dollar" class="form__label"
+              >Курс доллар продажа</label
+            >
+          </div>
+        </form>
+      </div>
+      <div class="home">
+        <div class="home-btn">
+          <img src="./assets/images/Group 4 (7).svg" alt="" />
+          <h3>Сохранить</h3>
+        </div>
+        <div class="home-btn black" onclick="goBack()">
+          <img src="./assets/images/Group 4 (6).svg" alt="" />
+          <h3>
+            Вернуться <br />
+            назад
+          </h3>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/admin.js"></script>
+  </body>
+</html>

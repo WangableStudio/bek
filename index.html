@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site name</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img class="banner" src="./assets/images/Photo.jpg" alt="" />
+      <div class="home">
+        <a href="./exchange.html?type=Обмен USDT" class="home-btn">
+          <img src="./assets/images/Group 4.svg" alt="" />
+          <h3>Купить/продать USDT</h3>
+        </a>
+        <a href="./exchange.html?type=Обмен $" class="home-btn yellow">
+          <img src="./assets/images/Group 4 (1).svg" alt="" />
+          <h3>Купить/продать ДОЛЛАР</h3>
+        </a>
+      </div>
+      <div class="home">
+        <a href="./kurs.html" class="home-btn blue">
+          <img src="./assets/images/Group 4 (2).svg" alt="" />
+          <h3>курс</h3>
+        </a>
+        <a href="./applications.html" class="home-btn blue">
+          <img src="./assets/images/Group 4 (3).svg" alt="" />
+          <h3>Все заявки</h3>
+        </a>
+      </div>
+      <div class="home">
+        <a href="./company.html" class="home-btn black">
+          <img src="./assets/images/Group 4 (4).svg" alt="" />
+          <h3>о компании</h3>
+        </a>
+        <a href="./support.html" class="home-btn black">
+          <img src="./assets/images/Group 4 (5).svg" alt="" />
+          <h3>поддержка</h3>
+        </a>
+      </div>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tg = window.Telegram.WebApp;
+
+        // Показываем основной интерфейс
+        tg.expand();
+        tg.enableClosingConfirmation();
+
+        const user = tg.initDataUnsafe.user;
+
+        axios
+          .post("https://shamex.online/api/v1/user/", {
+            id: user.id,
+            name: user.first_name,
+            username: user.username,
+          })
+          .then((res) => {
+            localStorage.setItem("token", res.data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    </script>
+  </body>
+</html>
